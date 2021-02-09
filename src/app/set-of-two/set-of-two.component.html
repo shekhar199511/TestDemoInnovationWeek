@@ -1,0 +1,16 @@
+<div class="section">
+    <div class='set-of-two row' data-content-type='setOfTwo'>
+        <div *ngFor="let item of fields.fields.items" class={{className}}>
+            <app-call-to-action [className]="className" [fields] = "item" *ngIf="item.sys.contentType.sys.id==='callToAction'"></app-call-to-action>
+
+            <app-headline [className]="className" [fields] = "item" *ngIf="item.sys.contentType.sys.id==='headline'"></app-headline>
+
+            <app-image-with-caption [className]="className" [fields] = "item" *ngIf="item.sys.contentType.sys.id==='imageWithCaption'"></app-image-with-caption>
+
+            <app-paragraph-with-headline [className]="className" [fields] = "item" *ngIf="item.sys.contentType.sys.id==='paragraphWithHeadline'"></app-paragraph-with-headline>
+
+            <app-text-with-image [className]="className" [fields] = "item" *ngIf="item.sys.contentType.sys.id==='textWithImage'"></app-text-with-image>
+        </div>
+    </div>
+</div>
+

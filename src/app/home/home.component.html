@@ -1,0 +1,35 @@
+<div *ngIf="productsByLocale[currentLocale]">
+    <div *ngFor="let section of productsByLocale[currentLocale].fields.sections">
+        <app-call-to-action [fields] = "section" *ngIf="section.sys.contentType.sys.id==='callToAction'"></app-call-to-action>
+
+        <app-header [fields] = "section" [defaultImageURL]="defaultImageURL" *ngIf="section.sys.contentType.sys.id==='header'"></app-header>
+        
+        <app-headline [fields] = "section" *ngIf="section.sys.contentType.sys.id==='headline'"></app-headline>
+
+        <app-hero-image [fields] = "section" *ngIf="section.sys.contentType.sys.id==='heroImage'"></app-hero-image>
+        
+        <app-image-carousel [fields] = "section" *ngIf="section.sys.contentType.sys.id==='imageCarousel'"></app-image-carousel>
+
+        <app-image-with-caption [fields] = "section" *ngIf="section.sys.contentType.sys.id==='imageWithCaption'"></app-image-with-caption>
+
+        <app-paragraph-with-headline [fields] = "section" *ngIf="section.sys.contentType.sys.id==='paragraphWithHeadline'"></app-paragraph-with-headline>
+        
+        <app-set-of-two [fields] = "section" *ngIf="section.sys.contentType.sys.id==='setOfTwo'"></app-set-of-two>
+        
+        <app-set-of-three [fields] = "section" *ngIf="section.sys.contentType.sys.id==='setOfThree'"></app-set-of-three>
+        
+        <app-text-with-image [fields] = "section" *ngIf="section.sys.contentType.sys.id==='textWithImage'"></app-text-with-image>
+    </div>
+</div>
+
+<!--Locale-->
+<div class='row'>
+    <div class='col-md-3'></div>
+    <div class="text-center border-0 col-lg-6 m-lg-5 p-lg-3 p-3 m-1">
+      <select
+        class="locale-control text-center" (change)="handleSelectLocale($event.target.value)">
+        <option *ngFor="let code of locales">{{code}}</option>
+    </select>
+    </div>
+    <div class='col-md-3'></div>
+</div>

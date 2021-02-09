@@ -1,0 +1,17 @@
+<div class="section">
+    <div class='header' data-content-type='header'>
+        <div>
+            <picture>
+                <source srcset="https:{{imageURL}}?h=50&fm=webp" type="image/webp" />
+                <img src="https:{{imageURL}}h=50&fm=png" />
+            </picture>
+        </div>
+        <div class='nav nav-justified justify-content-end'>
+            <a *ngFor="let navLink of fields.fields.navigationLinks"
+                class='nav-item nav-link'
+                href={{navLink.fields.url}}>
+                <strong>{{navLink.fields.displayText}}</strong>
+            </a>
+        </div>
+    </div>
+</div>
