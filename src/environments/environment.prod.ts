@@ -1,7 +1,11 @@
 export const environment = {
-  production: true,
+  production: false,
   contentful: {
-    spaceId: 'kq4h4rlsuev2',
-    token: 'O4OhcP1nhTbQlqQOhYl77JW8xIE03TeQV6Tz0tpgKzs'
+    spaceId: 'w1hhuzdk41ac',
+    token: 'efXl30aiujBThdMLTs7zf_GV90SBCfq_n8zTT1moqDM'
+  },
+  contentfulPreview: {
+    spaceId: 'w1hhuzdk41ac',
+    token: 'Rj5LJR_RpeOJymYA7XxGJ8BM5wpgLREz7ACzGk73k5Y'
   }
 };
