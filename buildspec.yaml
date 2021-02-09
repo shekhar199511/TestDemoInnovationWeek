@@ -24,4 +24,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/TestDemoInnovationWeek
+  base-directory: dist/testDemoInnovationWeek
